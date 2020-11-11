@@ -15,6 +15,7 @@ fn emit_as_base64(){
     let mut hasher = Sha1::new();
     hasher.input(key);
     let sha1_string = hasher.result_str();
+    // sha1_string: 558c6e2f93212d10f8b4ab1ac77031e2ba157471
     println!("sha1: {}", sha1_string);
     let base64_sha1_string = encode(sha1_string);
     println!("base64: {}", base64_sha1_string);
